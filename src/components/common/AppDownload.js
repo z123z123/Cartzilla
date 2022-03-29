@@ -1,14 +1,15 @@
 import {AppStoreBadges} from "./AppStoreBadges"
+import { Col, Row, Container } from "react-bootstrap";
 
 
 export function AppDownload() {
 return(
 
     <section className="bg-red pt-5 d-flex align-items-center">
-    <div className="container">
-      <div className="row">
+    <Container>
+      <Row>
 
-        <div className="col-6 col-lg-5 offset-lg-2 d-flex align-items-center">
+        <Col xs={6} lg={{span:5, offset:2}} className="d-flex align-items-center">
           <div className="app-preview-content align-items-center pe-lg-5 mb-5">
             <h2 id="app-preview-download-text-1">
               Order food on the go with Cartzilla App
@@ -20,11 +21,9 @@ return(
             <AppStoreBadges />
             
           </div>
-        </div>
+        </Col>
 
-        <div
-          class="phone-img d-flex col-5 offset-1 offset-lg-0 col-lg-4 align-items-end"
-        >
+        <Col xs={{span:5, offset:1}} lg={{span:4, offset:0}} className="phone-img d-flex align-items-end">
           <div>
             <img
               className="img-fluid d-block mt-4 mt-lg-0 pe-0 pe-lg-5"
@@ -34,10 +33,10 @@ return(
               alt="phone app"
             />
           </div>
-        </div>
+        </Col>
         
-      </div>
-    </div>
+      </Row>
+    </Container>
   </section>
 )
 

@@ -1,3 +1,5 @@
+import { Col } from "react-bootstrap";
+
 export function FooterCategoriesItem({ href, footercategoryitem }) {
   return (
     <li>
@@ -16,15 +18,14 @@ export function FooterCategoriesJoinUs({ footercategoryname }) {
   const footeritems = ["Careers", "Restaurants", "Become a Courier", "About"];
 
   return (
-    <div className="col-12 col-md-3 col-lg-2">
+    <Col xs={12} md={3} lg={2}>
       <FooterCategoriesName footercategoryname={footercategoryname} />
-
       <ul className="d-flex flex-column text-md-start p-0">
         {footeritems.map((c) => (
           <FooterCategoriesItem footercategoryitem={c} key={c} />
         ))}
       </ul>
-    </div>
+    </Col>
   );
 }
 
@@ -32,7 +33,7 @@ export function FooterCategoriesLetUsHelpYou({ footercategoryname }) {
   const footeritems = ["Help Center", "Support", "Contact us"];
 
   return (
-    <div class="col-12 col-md-3 col-lg-3">
+    <Col xs={12} md={3} lg={3}>
       {" "}
       <FooterCategoriesName footercategoryname={footercategoryname} />
       <ul className="d-flex flex-column text-md-start p-0">
@@ -40,7 +41,7 @@ export function FooterCategoriesLetUsHelpYou({ footercategoryname }) {
           <FooterCategoriesItem footercategoryitem={c} key={c} />
         ))}
       </ul>
-    </div>
+    </Col>
   );
 }
 
@@ -48,7 +49,7 @@ export function FooterCategoriesFollowUs({ footercategoryname }) {
   const footeritems = ["Facebook", "Twitter", "Instagram"];
 
   return (
-    <div className="col-12 col-md-3 col-lg-2">
+    <Col xs={12} md={3} lg={2}>
       <FooterCategoriesName footercategoryname={footercategoryname} />
 
       <ul className="d-flex flex-column text-md-start p-0">
@@ -56,7 +57,6 @@ export function FooterCategoriesFollowUs({ footercategoryname }) {
           <FooterCategoriesItem footercategoryitem={c} key={c} />
         ))}
       </ul>
-    </div>
+    </Col>
   );
 }
-

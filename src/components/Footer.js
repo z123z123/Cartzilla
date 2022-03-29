@@ -2,20 +2,22 @@ import {
   FooterCategoriesJoinUs,
   FooterCategoriesLetUsHelpYou,
   FooterCategoriesFollowUs,
-  FooterCategoriesName
+  FooterCategoriesName,
 } from "./common/FooterComponents";
 import { FooterCurrencyPicker } from "./common/FooterCurrencePicker";
 import { FooterLogo } from "./common/FooterLogo";
 import { FooterLegal } from "./common/FooterLegal";
 import { AppStoreBadges } from "./common/AppStoreBadges";
 
+import { Container, Row ,Col } from "react-bootstrap";
+
 export function Footer() {
   return (
     <footer>
       <section className="footer d-flex">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-3 col-lg-2 flex-column">
+        <Container>
+          <Row>
+            <Col xs={12} md={3} lg={2} flex-column>
               <FooterLogo
                 src="./img/footer-logo-light.png"
                 alt="cartzilla footer logo"
@@ -24,7 +26,7 @@ export function Footer() {
                 src="./img/en.png"
                 btn_content=" Eng / $ "
               />
-            </div>
+            </Col>
             {/*<div className="col-12 col-md-3 col-lg-2 flex-column">
               <img
                 src="./img/footer-logo-light.png"
@@ -64,15 +66,15 @@ export function Footer() {
 
             <FooterCategoriesFollowUs footercategoryname="Follow us" />
 
-            <div className="col-12 col-md-3 col-lg-3">
-            <FooterCategoriesName footercategoryname="Download our app" />
+            <Col xs={12} md={3} lg={3}>
+              <FooterCategoriesName footercategoryname="Download our app" />
               <AppStoreBadges />
-            </div>
-          </div>
+            </Col>
+          </Row>
 
           <div className="footer-last">
-            <div className="row">
-              <div className="col-12">
+            <Row>
+              <Col xs={12}>
                 <FooterLegal href="https://reactjs.org/docs/hello-world.html" />
 
                 {/*<div className="legal pt-4">
@@ -97,10 +99,10 @@ export function Footer() {
                     </div>
                   </div>
           </div>*/}
-              </div>
-            </div>
+              </Col>
+            </Row>
           </div>
-        </div>
+        </Container>
       </section>
     </footer>
   );

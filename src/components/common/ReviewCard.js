@@ -1,4 +1,5 @@
-import { Children } from "react";
+import { Col } from "react-bootstrap";
+
 
 export function ReviewCardFilledStar() {
   return (
@@ -77,7 +78,7 @@ export function ReviewCardThreeStars({
   date,
 }) {
   return (
-    <div className="col-12 col-md-6 col-lg-3">
+    <Col xs={12} md={6} lg={3}>
       <div className="review card">
         <ReviewCardBody reviewText={reviewText}>
           <ReviewCardFilledStar />
@@ -88,7 +89,7 @@ export function ReviewCardThreeStars({
         </ReviewCardBody>
         <ReviewCardFooter src={src} alt={alt} clientName={clientName} date={date} />
       </div>
-    </div>
+    </Col>
   );
 }
 
@@ -101,7 +102,7 @@ export function ReviewCardFourStars({
     date,
   }) {
     return (
-      <div className="col-12 col-md-6 col-lg-3">
+      <Col xs={12} md={6} lg={3}>
         <div className="review card">
           <ReviewCardBody reviewText={reviewText}>
             <ReviewCardFilledStar />
@@ -112,7 +113,7 @@ export function ReviewCardFourStars({
           </ReviewCardBody>
           <ReviewCardFooter src={src} alt={alt} clientName={clientName} date={date} />
         </div>
-      </div>
+      </Col>
     );
   }
   
@@ -125,7 +126,7 @@ export function ReviewCardFourStars({
     date,
   }) {
     return (
-      <div className="col-12 col-md-6 col-lg-3">
+      <Col xs={12} md={6} lg={3}>
         <div className="review card">
           <ReviewCardBody reviewText={reviewText}>
             <ReviewCardFilledStar />
@@ -136,6 +137,6 @@ export function ReviewCardFourStars({
           </ReviewCardBody>
           <ReviewCardFooter src={src} alt={alt} clientName={clientName} date={date} />
         </div>
-      </div>
+      </Col>
     );
   }

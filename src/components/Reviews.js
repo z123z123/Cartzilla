@@ -2,12 +2,14 @@ import { ReviewCardThreeStars } from "./common/ReviewCard";
 import { ReviewCardFourStars } from "./common/ReviewCard";
 import { ReviewCardFiveStars } from "./common/ReviewCard";
 
+import { Container, Row } from "react-bootstrap";
+
 export function Reviews() {
   return (
     <section className="reviews d-flex align-items-center">
-      <div className="container">
+      <Container>
         <h2 className="text-center">Customer reviews</h2>
-        <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <Row xs={12} sm={2} md={3} lg={4}>
           <ReviewCardFourStars
             reviewText="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
 diam nonumy eirmod."
@@ -123,7 +125,7 @@ diam nonumy eirmod."
               </div>
             </div>
   </div>*/}
-        </div>
+        </Row>
 
         <nav aria-label="...">
           <ul className="pagination pagination-sm align-items-center justify-content-center">
@@ -139,7 +141,7 @@ diam nonumy eirmod."
             </li>
           </ul>
         </nav>
-      </div>
+      </Container>
     </section>
   );
 }

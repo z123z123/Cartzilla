@@ -1,13 +1,14 @@
-import { Button } from "./common/Button";
 import { PartnershipCard } from "./common/PartnershipCard";
+
+import { Container, Row, Col } from "react-bootstrap";
 
 export function Partnership() {
   return (
     <section className="offer">
-      <div className="container">
-        <div className="row">
+      <Container>
+        <Row>
           
-          <div className="col-12 col-lg-6">
+          <Col xs={12} lg={6}>
             <div className="cta_courier">
               <PartnershipCard
                 cta="Become a Courier"
@@ -19,9 +20,9 @@ export function Partnership() {
                 col="6"
               />
             </div>
-          </div>
+          </Col>
 
-          <div className="col-12 col-lg-6">
+          <Col xs={12} lg={6}>
             <div className="cta_partner">
               <PartnershipCard
                 cta="Become a Partner"
@@ -32,13 +33,13 @@ export function Partnership() {
                 col="6"
               />
             </div>
-          </div>
+          </Col>
 
           {/*<div className="col-12 col-lg-6">
             <div className="cta_block cta_courier mb-3 mb-lg-0">
               <div className="row">
-                <div className="col-6 d-flex align-items-center">
-                  <div className="inner-content">
+                <Container className="col-6 d-flex align-items-center">
+                  <Row className="inner-content">
                     <h2>Become a Courier</h2>
                     <p>
                       Earn competitive salary as delivery courier working
@@ -81,8 +82,8 @@ export function Partnership() {
               </div>
             </div>
           </div>*/}
-        </div>
-      </div>
+        </Row>
+      </Container>
     </section>
   );
 }

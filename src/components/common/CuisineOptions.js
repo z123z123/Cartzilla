@@ -1,21 +1,22 @@
-import { CuisineCard, CuisineCardText, CuisineCardImage } from "./CuisineCard";
+import { CuisineCard } from "./CuisineCard";
+import { Col, Row, Container } from "react-bootstrap";
 
 export function CuisineOptions() {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
+    <Container>
+      <Row>
+        <Col xs={12}>
           <h2 className="text-center" id="h-categories-intro">
             Trending food in your city
           </h2>
           <p className="text-center" id="p-categories-intro">
             Choose what you want and we deliver it to you
           </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-12">
-          <div className="row row-cols-1 row-cols-md-3 g-4">
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={12}>
+          <Row className="g-4">
             <CuisineCard
               src="./img/01.jpg"
               alt="Burger category image"
@@ -72,9 +73,9 @@ export function CuisineOptions() {
               source="./img/06.jpg"
               alt="Healthy Food category image"
   />*/}
-          </div>
-        </div>
-      </div>
-    </div>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 }

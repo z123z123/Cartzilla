@@ -1,3 +1,5 @@
+import { Col } from "react-bootstrap";
+
 export function CuisineCardImage({ src, alt, children }) {
   return (
     <div className="card category">
@@ -17,12 +19,12 @@ export function CuisineCardText({ title }) {
 
 export function CuisineCard({ src, alt, title }) {
   return (
-    <div className="col">
+    <Col xs={12} md={4} >
       <div>
         <CuisineCardImage src={src} alt={alt} className="card-img-top">
         <CuisineCardText title={title} />
         </CuisineCardImage>
       </div>
-    </div>
+    </Col>
   );
 }

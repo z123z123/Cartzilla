@@ -1,6 +1,10 @@
+import { Col } from "react-bootstrap";
+
+
 export function RestautantCard({src, alt}){
     return(
-        <div className="col">
+
+        <Col xs={12} sm={3} md={4} lg={3}> 
         <div className="restaurant-card card">
           <img
             src={src}
@@ -8,6 +12,6 @@ export function RestautantCard({src, alt}){
             alt={alt}
           />
         </div>
-      </div>
+      </Col>
     )
 }
