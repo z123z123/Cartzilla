@@ -1,4 +1,4 @@
-import { ReviewStars, ReviewCard } from "./common/ReviewCard";
+import { ReviewCardFourStars, ReviewStars, ReviewCard } from "./common/ReviewCard";
 
 import { Container, Row } from "react-bootstrap";
 
@@ -24,8 +24,8 @@ export function Reviews() {
       stars: 5,
       reviewText:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
-      name: "./img/mary.jpg",
-      image: "Mary Alicia Grant",
+      name: "Mary Alicia Grant",
+      image: "./img/mary.jpg",
       date: "Jan 27, 2020",
     },
     {
@@ -47,7 +47,7 @@ export function Reviews() {
             <ReviewCard key={object.name} value={object}></ReviewCard>
           ))}
 
-          {/* <ReviewCardFourStars
+          <ReviewCardFourStars
             reviewText="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
 diam nonumy eirmod."
             src="./img/richard.jpg"
@@ -56,7 +56,7 @@ diam nonumy eirmod."
             date="Feb 14, 2020"
           />
 
-          <ReviewCardThreeStars
+          {/* <ReviewCardThreeStars
             reviewText="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
 diam nonumy eirmod."
             src="./img/laura.jpg"

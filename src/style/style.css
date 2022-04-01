@@ -445,7 +445,12 @@ border-radius: 10px;
   line-height: 1rem;
 }
 
-.review .date {
+/* .reviewer_name {
+  columns: var(--darkgrey);
+  line-height: 1rem;
+} */
+
+.date {
   margin-bottom: 0;
   line-height: 1rem;
 }

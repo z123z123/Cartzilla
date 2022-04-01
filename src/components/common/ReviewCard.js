@@ -43,8 +43,8 @@ export function ReviewCardImage({ src, alt }) {
 export function ReviewCardClientName({ clientName, date }) {
   return (
     <div>
-      <p>
-        <strong>{clientName}</strong>
+      <p className="reviewer_name">
+        <strong >{clientName}</strong>
       </p>
       <p className="date">{date}</p>
     </div>
@@ -74,13 +74,13 @@ export function ReviewCardBody({ reviewText, children }) {
 export function ReviewCard({ value }) {
   return (
     <Col xs={12} md={6} lg={3}>
-      <ReviewCardBody reviewText={value.reviewText}>
+      <ReviewCardBody reviewText={value.reviewText} className="card-body">
         <ReviewStars starsNumber={value.stars}></ReviewStars>
       </ReviewCardBody>
-      <ReviewCardFooter
-        src={value.image}
+      <ReviewCardFooter 
+        src={value.image} 
         clientName={value.name}
-        date={value.date}
+        date={value.date} 
       ></ReviewCardFooter>
     </Col>
   );
