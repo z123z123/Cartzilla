@@ -1,6 +1,7 @@
 import bg from "./../../img/hero-bg.jpg";
-import { Button } from "../common/Button";
+import { ButtonPrimary } from "../common/Button";
 import { DropdownMenu } from "../common/DropdownMenu";
+import { Container, Row, Col } from "react-bootstrap";
 
 export function Hero() {
   return (
@@ -8,9 +9,9 @@ export function Hero() {
       className="hero pt-2 pb-4 bg-position-center d-flex align-items-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-lg-6 offset-lg-3">
+      <Container>
+        <Row>
+          <Col xs={12} lg={{span:6, offset:3}}>
             <p className="text-center" id="hero-text-1">
               #1 Food Delivery Service since 2010
             </p>
@@ -84,7 +85,7 @@ export function Hero() {
             </div>
             <div className="d-flex justify-content-center">
 
-            <Button cta="What do you want to eat?"  id="hero-button" />
+            <ButtonPrimary cta="What do you want to eat?"  id="hero-button" />
 
               {/*<button
                 type="button"
@@ -94,9 +95,9 @@ export function Hero() {
                 What do you want to eat?
   </button>*/}
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 }

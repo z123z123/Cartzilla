@@ -1,9 +1,13 @@
+import Badge from "react-bootstrap/Badge";
+import Image from "react-bootstrap/Image";
+
+
 export function AppStoreBadges() {
     return (
-      <div>
+      <Badge>
         {/*<p className="group-name mb-4">{footercategoryname}</p>*/}
 
-        <img
+        <Image
           className="align-items-center"
           src="./img/appleBadge.png"
           alt="download from apple"
@@ -240,7 +244,7 @@ export function AppStoreBadges() {
               c-56.1-32.1-101.6-5.3-101.6,58.8v5.8C400.1,300.3,445.6,274,501.7,305.7z"
               />
               </svg>
-      </div>
+      </Badge>
     );
   }
   

@@ -3,30 +3,21 @@ import {
   FooterCategoriesLetUsHelpYou,
   FooterCategoriesFollowUs,
   FooterCategoriesName,
+  FooterCols,
 } from "./common/FooterComponents";
-import { FooterCurrencyPicker } from "./common/FooterCurrencePicker";
+import { FooterCurrencyPicker } from "./common/FooterCurrencyPicker";
 import { FooterLogo } from "./common/FooterLogo";
 import { FooterLegal } from "./common/FooterLegal";
 import { AppStoreBadges } from "./common/AppStoreBadges";
 
-import { Container, Row ,Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 export function Footer() {
   return (
     <footer>
       <section className="footer d-flex">
         <Container>
-          <Row>
-            <Col xs={12} md={3} lg={2} flex-column>
-              <FooterLogo
-                src="./img/footer-logo-light.png"
-                alt="cartzilla footer logo"
-              />
-              <FooterCurrencyPicker
-                src="./img/en.png"
-                btn_content=" Eng / $ "
-              />
-            </Col>
+        {/*  */}
             {/*<div className="col-12 col-md-3 col-lg-2 flex-column">
               <img
                 src="./img/footer-logo-light.png"
@@ -48,8 +39,8 @@ export function Footer() {
                 </svg>
               </button>
   </div>*/}
-
-            <FooterCategoriesJoinUs footercategoryname="Join us" />
+            <FooterCols />
+            {/* <FooterCategoriesJoinUs footercategoryname="Join us" /> */}
             {/*footeritems=["Careers", "Restaurants", "Become a Courier", "About"] /> KAK PRIMENIT ARRAY?*/}
 
             {/*<div className="col-12 col-md-3 col-lg-2">
@@ -62,15 +53,15 @@ export function Footer() {
                 </ul>
             </div>*/}
 
-            <FooterCategoriesLetUsHelpYou footercategoryname="Let us help you" />
+            {/* <FooterCategoriesLetUsHelpYou footercategoryname="Let us help you" />
 
-            <FooterCategoriesFollowUs footercategoryname="Follow us" />
+            <FooterCategoriesFollowUs footercategoryname="Follow us" /> */}
 
-            <Col xs={12} md={3} lg={3}>
+            {/* <Col xs={12} md={3} lg={3}>
               <FooterCategoriesName footercategoryname="Download our app" />
               <AppStoreBadges />
-            </Col>
-          </Row>
+            </Col> */}
+          {/* </Row> */}
 
           <div className="footer-last">
             <Row>

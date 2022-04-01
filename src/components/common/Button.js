@@ -1,7 +1,9 @@
-export function Button({ cta }) {
+import Button from "react-bootstrap/Button";
+
+export function ButtonPrimary({ cta }) {
   return (
-    <button type="button" className="btn btn-react">
+    <Button className="btn-react">
       {cta}
-    </button>
+    </Button>
   );
 }

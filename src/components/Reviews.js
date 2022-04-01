@@ -1,16 +1,53 @@
-import { ReviewCardThreeStars } from "./common/ReviewCard";
-import { ReviewCardFourStars } from "./common/ReviewCard";
-import { ReviewCardFiveStars } from "./common/ReviewCard";
+import { ReviewStars, ReviewCard } from "./common/ReviewCard";
 
 import { Container, Row } from "react-bootstrap";
 
 export function Reviews() {
+  const reviews = [
+    {
+      stars: 3,
+      reviewText:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+      name: "Richard Davis",
+      image: "./img/richard.jpg",
+      date: "Feb 14, 2020",
+    },
+    {
+      stars: 3,
+      reviewText:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+      name: "Laura Willson",
+      image: "./img/laura.jpg",
+      date: "Feb 05, 2020",
+    },
+    {
+      stars: 5,
+      reviewText:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+      name: "./img/mary.jpg",
+      image: "Mary Alicia Grant",
+      date: "Jan 27, 2020",
+    },
+    {
+      stars: 4,
+      reviewText:
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.",
+      name: "Rafael Marquez",
+      image: "./img/rafael.jpg",
+      date: "Dec 19, 2020",
+    },
+  ];
+
   return (
     <section className="reviews d-flex align-items-center">
       <Container>
         <h2 className="text-center">Customer reviews</h2>
         <Row xs={12} sm={2} md={3} lg={4}>
-          <ReviewCardFourStars
+          {reviews.map((object) => (
+            <ReviewCard key={object.name} value={object}></ReviewCard>
+          ))}
+
+          {/* <ReviewCardFourStars
             reviewText="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
 diam nonumy eirmod."
             src="./img/richard.jpg"
@@ -44,7 +81,7 @@ diam nonumy eirmod."
             alt="cusromer image"
             clientName="Rafael Marquez"
             date="Dec 19, 2020"
-          />
+          /> */}
 
           {/*<div className="col-12 col-md-6 col-lg-3">
             <div className="review card">

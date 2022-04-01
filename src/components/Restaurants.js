@@ -1,4 +1,4 @@
-import { RestautantCard } from "./common/RestaurantCard";
+import { RestautantCard, RestaurantBrands } from "./common/RestaurantCard";
 
 import { Container, Row } from "react-bootstrap";
 
@@ -11,7 +11,7 @@ export function Restaurants() {
       <p className="text-center" id="p-restaurants-intro">
         Check the best restaurants near you
       </p>
-      <Row>
+      {/* <Row>
         <RestautantCard src="./img/McD.png" alt="mcdonald's logo" />
 
         <RestautantCard src="./img/Dom.png" alt="domino's logo" />
@@ -35,7 +35,9 @@ export function Restaurants() {
         <RestautantCard src="./img/phut.png" alt="pizza hut logo" />
 
         <RestautantCard src="./img/asian.png" alt="asina chao logo" />
-      </Row>
+      </Row> */}
+
+      <RestaurantBrands/>
     </Container>
   );
 }

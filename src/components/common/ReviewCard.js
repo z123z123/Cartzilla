@@ -1,5 +1,6 @@
-import { Col } from "react-bootstrap";
-
+import { Col, Image } from "react-bootstrap";
+import StarFilled from "./../../img/StarFilled.svg";
+import StarEmpty from "./../../img/StarEmpty.svg";
 
 export function ReviewCardFilledStar() {
   return (
@@ -34,7 +35,7 @@ export function ReviewCardEmptyStar() {
 export function ReviewCardImage({ src, alt }) {
   return (
     <div>
-      <img src={src} className="img-fluid" alt={alt} />
+      <Image src={src} className="img-fluid" alt={alt} />
     </div>
   );
 }
@@ -70,6 +71,21 @@ export function ReviewCardBody({ reviewText, children }) {
   );
 }
 
+export function ReviewCard({ value }) {
+  return (
+    <Col xs={12} md={6} lg={3}>
+      <ReviewCardBody reviewText={value.reviewText}>
+        <ReviewStars starsNumber={value.stars}></ReviewStars>
+      </ReviewCardBody>
+      <ReviewCardFooter
+        src={value.image}
+        clientName={value.name}
+        date={value.date}
+      ></ReviewCardFooter>
+    </Col>
+  );
+}
+
 export function ReviewCardThreeStars({
   reviewText,
   src,
@@ -87,56 +103,104 @@ export function ReviewCardThreeStars({
           <ReviewCardEmptyStar />
           <ReviewCardEmptyStar />
         </ReviewCardBody>
-        <ReviewCardFooter src={src} alt={alt} clientName={clientName} date={date} />
+        <ReviewCardFooter
+          src={src}
+          alt={alt}
+          clientName={clientName}
+          date={date}
+        />
       </div>
     </Col>
   );
 }
 
-
 export function ReviewCardFourStars({
-    reviewText,
-    src,
-    alt,
-    clientName,
-    date,
-  }) {
-    return (
-      <Col xs={12} md={6} lg={3}>
-        <div className="review card">
-          <ReviewCardBody reviewText={reviewText}>
-            <ReviewCardFilledStar />
-            <ReviewCardFilledStar />
-            <ReviewCardFilledStar />
-            <ReviewCardFilledStar />
-            <ReviewCardEmptyStar />
-          </ReviewCardBody>
-          <ReviewCardFooter src={src} alt={alt} clientName={clientName} date={date} />
-        </div>
-      </Col>
-    );
-  }
-  
+  reviewText,
+  src,
+  alt,
+  clientName,
+  date,
+}) {
+  return (
+    <Col xs={12} md={6} lg={3}>
+      <div className="review card">
+        <ReviewCardBody reviewText={reviewText}>
+          <ReviewCardFilledStar />
+          <ReviewCardFilledStar />
+          <ReviewCardFilledStar />
+          <ReviewCardFilledStar />
+          <ReviewCardEmptyStar />
+        </ReviewCardBody>
+        <ReviewCardFooter
+          src={src}
+          alt={alt}
+          clientName={clientName}
+          date={date}
+        />
+      </div>
+    </Col>
+  );
+}
 
-  export function ReviewCardFiveStars({
-    reviewText,
-    src,
-    alt,
-    clientName,
-    date,
-  }) {
-    return (
-      <Col xs={12} md={6} lg={3}>
-        <div className="review card">
-          <ReviewCardBody reviewText={reviewText}>
-            <ReviewCardFilledStar />
-            <ReviewCardFilledStar />
-            <ReviewCardFilledStar />
-            <ReviewCardFilledStar />
-            <ReviewCardFilledStar />
-          </ReviewCardBody>
-          <ReviewCardFooter src={src} alt={alt} clientName={clientName} date={date} />
-        </div>
-      </Col>
-    );
-  }
+export function ReviewCardFiveStars({
+  reviewText,
+  src,
+  alt,
+  clientName,
+  date,
+}) {
+  return (
+    <Col xs={12} md={6} lg={3}>
+      <div className="review card">
+        <ReviewCardBody reviewText={reviewText}>
+          <ReviewCardFilledStar />
+          <ReviewCardFilledStar />
+          <ReviewCardFilledStar />
+          <ReviewCardFilledStar />
+          <ReviewCardFilledStar />
+        </ReviewCardBody>
+        <ReviewCardFooter
+          src={src}
+          alt={alt}
+          clientName={clientName}
+          date={date}
+        />
+      </div>
+    </Col>
+  );
+}
+
+export function ReviewStars({ starsNumber }) {
+  //     const reviewStars = {
+  //       "Stars":[
+  //         {name: "Filled star", img: StarFilled },
+  //         {name: "Empty star", img: StarEmpty },
+  //       ]
+  //     };
+
+  //    return (
+  //       {Object.entries(reviewStars).map(([key, value]) => (
+  //         <Col xs={12} md={6} lg={3}
+  //         key={key}
+  //         {value.map((star) => (
+  //           <div key={star.img}>
+
+  //           </div>
+  //         )
+
+  //           )   }
+  //          >
+
+  // </Col>
+
+  //       ))}
+  //    )
+  const initialStars = new Array(5).fill(null).fill(StarFilled, 0, starsNumber);
+  return (
+    <>
+      {initialStars.map((element) => (
+        <>{element ? <Image src={element} /> : <Image src={StarEmpty} />}</>
+      ))}
+    </>
+  );
+}
